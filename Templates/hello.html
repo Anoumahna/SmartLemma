@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Mood</title>
+         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+                
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+
+       
+         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/layout.css') }}">
+
+       
+        
+       
+       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+       <body id="top">
+       
+        
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="../index.php">MOOD</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="../index.php">Home</a></li>
+          
+          <li><a href="about.html">About Us</a></li>
+          <li class="active"><a class="drop" href="#">Mood Prediction</a>
+            <ul>
+              <li><a href="pictorial.html">Pictorial</a></li>
+              <li><a href="twitter.html">Twitter Feed</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html">Doctors Near Me</a></li>
+          <li ><a href="faq.html">FAQs</a></li>
+          <li><a href="gallery.html">Gallery</a></li> 
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<img src="{{url_for('static', filename='back.jpg')}}" style="height:200px;width:1400px">
+</head>
+ 
+    
+    
+</div>
+    
+    <div class="wrapper row3">
+     <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    
+
+ 
+ <center>
+  <h2>Twitter feed Analysis</h2>
+  <form  action="" method="post" role="form">
+    {{ form.csrf }}
+    <div class="form-group">
+      <label for="name">Username:</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="What's your name?">
+    </div>
+   <br>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</center>
+ 
+  <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+ 
+        {% for message in messages %}
+            {% if "Error" not in message[1]: %}
+                <div class="alert alert-info">
+                <strong> </strong> {{ message[1] }}
+                </div>
+            {% endif %}
+ 
+            {% if "Error" in message[1]: %}
+                <div class="alert alert-info">
+                <strong>You think in a</strong> {{ message[1] }}<strong> way</strong>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+        
+
+ 
+</div>
+<br>      
+
+
+<script src="{{url_for('static', filename='jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='jquery.mobilemenu.js')}}"></script>
+</div>
+
+</div>
+</div>
+</main>
+
+</body>
+</html>

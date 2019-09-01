@@ -1,0 +1,21 @@
+.news-section {background:#f3f1f2; padding:60px 0 40px 0;}
+.news-section .section-title2 {padding-bottom:60px;}
+.news-section .news-box {display:block; background:#fff; padding:13px 20px 20px 20px; min-height:375px; margin-bottom:30px; }
+.news-section .news-box.img {background-size:cover; background-position:50% 50%; background-repeat:no-repeat; position:relative;}
+.news-section .news-box.img:after {position:absolute; top:0px; left:0px; width:100%; height:100%; background:rgba(0,0,0,0.5); content:""; z-index:1;} 
+.news-section .news-box.img .category,
+.news-section .news-box.img .name a,
+.news-section .news-box.img .date {color:#fff; position:relative; z-index:2 }
+.news-section .news-box.img p {color:#fff; position:relative; z-index:2}
+.news-section .news-box .category {display:block; line-height:26px; font-size:12px; color:#999999; font-style:italic; padding-bottom:24px; background:none !important;}
+.news-section .news-box .name {display:block; padding-bottom:4px; height:84px; overflow:hidden; }
+.news-section .news-box .name a {color:#800080; font-size:18px; font-weight:600; text-decoration:none; line-height:28px; }
+.news-section .news-box .date {display:block; line-height:22px; padding-bottom:7px; position:relative; font-size:14px; color:#999999; margin-bottom:18px;}
+.news-section .news-box .date:after {position:absolute; bottom:0px; left:0px; width:64px; height:2px; background:#d1c7cc;}
+.news-section .news-box .desc {display:block; color:#888888; line-height:24px; margin:0px; font-size:14px; padding-bottom:17px; min-height:48px; position:relative; float:left; text-align:justify;}
+.news-section .news-box .desc img {display:none;}
+.news-section .news-box .read-more {background: #800080 none repeat scroll 0 0; border-radius: 5px; bottom: 45px; color: #ffffff; display: block; font-size: 12px; left: 30px; line-height: 36px; padding: 0 15px; position: absolute; text-decoration: none; z-index: 2; }
+.news-section .news-box .read-more:hover {background:#530a53;}
+
+.news-section {padding:30px 0;}
+.news-section .section-title2 {padding-bottom:40px }

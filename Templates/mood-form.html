@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Mood</title>
+         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+                
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/font-awesome.min.css') }}">
+
+       
+         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/layout.css') }}">
+
+       
+        
+       
+       <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+       <body id="top">
+       
+        
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="../index.php">MOOD</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a href="../index.php">Home</a></li>
+          
+          <li><a href="about.html">About Us</a></li>
+          <li class="active"><a class="drop" href="#">Mood Prediction</a>
+            <ul>
+              <li><a href="http://127.0.0.1:7000/">Pictorial</a></li>
+              <li><a href="http://127.0.0.1:5000/">Twitter Feed</a></li>
+              <li><a href="http://127.0.0.1:8000/">Voice</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html">Doctors Near Me</a></li>
+          <li ><a href="faq.html">FAQs</a></li>
+          <li><a href="gallery.html">Gallery</a></li> 
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<img src="{{url_for('static', filename='back.jpg')}}" style="height:200px;width:1400px">
+</head>
+</div>
+    
+    <div class="wrapper row3">
+     <main class="hoc container clear"> 
+       <center>
+  <h2>PICTURE ANALYSIS</h2>
+</center>
+<form  action="" method="post" role="form">
+    {{ form.csrf }}
+    <div class="form-group">
+      <br>
+      <br>
+      <img src="{{url_for('static', filename='1.jpeg')}}" alt="Northern Lights" style="height:200px;width:400px">
+      <br>
+      <br>
+      <input type="text" class="form-control" id="name" name="name" placeholder="What's your feeling?"style="height:30px;width:400px">
+    </div>
+    <div class="form-group">
+      <br>
+      <br>
+
+      <img src="{{url_for('static', filename='3.jpeg')}}" alt="Northern Lights" style="height:200px;width:400px">
+      <br>
+      <br>
+      <input type="text" class="form-control" id="name" name="name2" placeholder="What's your feeling?"style="height:30px;width:400px">
+    </div>
+    <div class="form-group">
+      <br>
+      <br>
+      <img src="{{url_for('static', filename='4.jpeg')}}" alt="Northern Lights" style="height:200px;width:400px">
+      <br>
+      <br>
+      <input type="text" class="form-control" id="name" name="name3" placeholder="What's your feeling?"style="height:30px;width:400px">
+    </div>
+    <div class="form-group">
+      <br>
+      <br>
+      <img src="{{url_for('static', filename='6.jpeg')}}" alt="Northern Lights" style="height:200px;width:400px">
+      <br>
+      <br>
+      <input type="text" class="form-control" id="name" name="name4" placeholder="What's your feeling?"style="height:30px;width:400px">
+      <br>
+      <br>
+    </div>
+    <div class="form-group">
+      <img src="{{url_for('static', filename='7.jpeg')}}" alt="Northern Lights" style="height:200px;width:400px">
+      <br>
+      <br>
+      <input type="text" class="form-control" id="name" name="name5" placeholder="What's your feeling?"style="height:30px;width:400px">
+    <br>
+    <br>
+    </div>
+   
+   <br>
+   <br>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+   <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+ 
+        {% for message in messages %}
+            {% if "Error" not in message[1]: %}
+                <div class="alert alert-info">
+                <strong>You think in a </strong> {{ message[1] }}<strong> way</strong>
+                </div>
+            {% endif %}
+ 
+            {% if "Error" in message[1]: %}
+                <div class="alert alert-info">
+                <strong>You think in a</strong> {{ message[1] }}<strong> way</strong>
+
+                </div>
+            {% endif %}
+        {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+
+ 
+</div>
+<br>      
+
+
+<script src="{{url_for('static', filename='jquery.backtotop.js')}}"></script>
+<script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='jquery.mobilemenu.js')}}"></script>
+</div>
+
+</div>
+</div>
+</main>
+
+</body>
+</html>
+

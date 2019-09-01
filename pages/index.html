@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="build/css/vendor.css">
+  <link rel="stylesheet" href="build/css/styles.css">
+  <script src="build/js/vendor.min.js"></script>
+  <script src="build/js/app.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+  <title>Doctor Lookup API</title>
+</head>
+<body>
+  <div class="container">
+  <div class ="header">
+    <img src= "img/doc-lookup.png" alt="logo" />
+    <h1>Doctor Lookup API</h1>
+  </div>
+  <hr>
+</div>
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-4">
+        <h2>Find doctors in the Portland area to treat you!</h2>
+        <form id="findDoc">
+          <label for="medicalIssue">Enter your Medical Issue:</label>
+          <input id="medicalIssue" type="text" required>
+          <button type="submit" class="btn btn-warning">Submit</button>
+          <button type="refresh" id="refresh"class="btn btn-primary">Refresh</button>
+        </form>
+      </div>
+      <div class = "col-md-8">
+        <h3 id="recommend">Based on your input we recommend the following doctors:</h3>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Title</th>
+              <th>Specialty</th>
+              <th>Practice Name</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
